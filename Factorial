@@ -1,0 +1,22 @@
+package comprog2java;
+/** @author Monique Andrei */
+import java.util.Scanner;
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num, fac=1;
+        System.out.print("Enter an integer[1-7]: ");
+        num = sc.nextInt();
+        switch(num) {
+            case 7: fac *= 7; System.out.println("7 * ");
+            case 6: fac *= 6; System.out.println("6 * ");
+            case 5: fac *= 5; System.out.println("5 * ");
+            case 4: fac *= 4; System.out.println("4 * ");
+            case 3: fac *= 3; System.out.println("3 * ");
+            case 2: fac *= 2; System.out.println("2 * ");
+            case 1: fac *= 1; System.out.println("1 = "+fac); break;
+            default: System.out.println("Not a number from 1-7!");
+            
+         }
+    }
+}
