@@ -1,0 +1,12 @@
+package comprog2java;
+/** @author Monique Andrei */
+
+public class Dolphin extends Animal{
+    public void makeSound(){
+        System.out.println(name+" sounds like: Eek.. Eek..");
+    }
+    @Override
+    public void move(){
+        System.out.println(name+" is moving Swiw.. Swim..");
+    }
+}
