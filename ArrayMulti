@@ -1,0 +1,42 @@
+package comprog2java;
+/** @author Monique Andrei */
+import java.util.Scanner;
+public class ArraysMulti {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int rec[][] = new int[3][]; // rectangular array [row][column]
+//int rec[][] = new int[3][3];
+       rec[0] = new int[3];
+       rec[1] = new int[3];
+       rec[2] = new int[3];
+       for(int r=0; r<rec.length; r++){ // to iterate within each row
+           for(int c=0; c<rec[r].length; c++){ // to iterate within each column
+               System.out.print("Input integer into array ["+r+"]["+c+"]: ");
+               rec[r][c] = sc.nextInt();
+           }
+       }
+       for(int r=0; r<rec.length; r++){ // to iterate within each row
+           for (int i:rec[r]) { // for each element within each row
+               System.out.print(i+" ");
+           }
+       }
+       System.out.println("");
+       int nonRec[][] = new int[4][]; // Non rectangular array
+       nonRec[0] = new int[2];
+       nonRec[1] = new int[4];
+       nonRec[2] = new int[6];
+       nonRec[3] = new int[8];
+       for(int r=0; r<nonRec.length; r++){
+           for(int c=0; c<nonRec[r].length; c++){
+               System.out.print("Input integer into array ["+r+"]["+c+"]: ");
+               nonRec[r][c] = sc.nextInt();
+           }
+       }
+       for(int r=0; r<nonRec.length; r++){ // to iterate within each row
+           for (int i:nonRec[r]) { // for each element within each row
+               System.out.print(i+" ");
+           }
+           System.out.println("");
+       }
+    }
+}
