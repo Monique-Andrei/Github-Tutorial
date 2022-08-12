@@ -1,0 +1,57 @@
+package comprog2java;
+/** @author Monique Andrei */
+
+public class Arrays {
+    public static void main(String[] args) {
+        // char s[], t; only s is the array
+        // char[] x, z; both x & z are arrays
+        
+        char s[];           // aray declaration
+        s = new char[26];   // instantation - create the object
+        
+        for(int i=0; i<s.length; i++){
+             s[i] = (char) ('A'+i);  
+            // cast - conversation/wrap 'a' = 97, 'A' = 65
+             System.out.println("Character at index["+i+"] = "+s[i]);
+        }
+        
+        char str1[] = {'M','O','N','I','Q','U','E',' ','A','N','D','R','E','I',};
+        // initialized array
+        for(int i=0; i<str1.length; i++){
+            System.out.print(str1[i]);
+        }
+        System.out.println("");
+        
+        int x[] = { 99, 75, 88, 60, 90, 100 },sum=0;
+        for(int i=0; i<x.length; i++){
+            System.out.println("The integer inside index["+i+"] = "+x[i]);
+            sum += x[i];
+        }
+        System.out.println("The average is: "+sum/6);
+        
+        String[] neym1;              // declaration
+        neym1 = new String[3];       // creation/instatation
+        neym1[0] = "Monique Andrei De Castro";       // content
+        neym1[1] = "Taylor Swift";
+        neym1[2] = "Ariana Grande";
+        
+        for( int i=0; i<neym1.length; i++){
+            System.out.println("String at index["+i+"]: "+neym1[i]);
+        }
+        
+        for(String ss : neym1){ // 4. for each loop
+            System.out.println("A String inside the array: "+ss);
+        }
+       
+        String[] neym2 = {"De Castro", "Swift", "Grande" };  // builder form
+        for(String ss : neym2){ // for each loop
+            System.out.println(ss);
+        }
+        
+        int[] y = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        System.arraycopy(x, 0, y, 0, x.length);
+        for(int i : y){
+            System.out.println(i);
+        }
+    }
+}
